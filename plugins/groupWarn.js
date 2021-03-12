@@ -54,7 +54,7 @@ let handler = async (m, { conn, text }) => {
  		conn.groupRemove(m.chat, [user])
  	})
  } else {
- 	conn.reply(m.chat, `*[ MEMBER WARNING ]*\n\n@${number} : [ ${warn} / 5 ]\n\n*Si recibe una advertencia 5x, será expulsado automáticamente.* !`, null, {contextInfo: {
+ 	conn.reply(m.chat, `*[ MEMBER WARNING ]*\n\n@${number} : [ ${warn} / 5 ]\n\n*Si recibe 5 advertencias, será expulsado automáticamente.* !`, null, {contextInfo: {
           mentionedJid: [user]
  	}})
 }
