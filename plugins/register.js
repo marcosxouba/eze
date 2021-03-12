@@ -10,8 +10,8 @@ let handler = async function (m, { text, usedPrefix }) {
   if (user.registered === true) throw `Ya te as registrado\nQuiere volver a registrarte?: ${usedPrefix}unreg <SN|SERIAL NUMBER>`
   if (!Reg.test(text)) throw `Formato incorrecto\n*${usedPrefix}lista <nombre>.edad>*`
   let [_, name, splitter, age] = text.match(Reg)
-  if (!name) throw 'Hey como te llamas, el nombre no puede estar estar vacío (Alphanumeric)'
-  if (!age) throw 'Hey Cuantos años tienes🥱'
+  if (!name) throw 'Epa huevon como te llamas no dejes vacío el nombre (Alphanumeric)'
+  if (!age) throw 'Hey Cuantos años invezil no dejes vacia la edad'
   user.name = name
   user.age = parseInt(age)
   user.regTime = + new Date
