@@ -17,7 +17,7 @@ BOT BY DarkZE
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > git clone https://github.com/Ezequiel7u7xD/darkbot2.0
-> cd esubot
+> cd darkbot2.0
 > npm install
 ```
 ###### Iniciar🏃🏻‍♂️
