@@ -2,27 +2,27 @@
 <img src="https://media.giphy.com/media/sRGUfOYkLt5chUss87/giphy.gif" width="128" height="135"/>
 </p>
 
-# esu-bot
-Simple WhatsApp Bot for Andriod & pc
+# DarkBot
+Bot de WhatsApp para android y pc
 
-BOT BY Smu330⃟꙰
+BOT BY DarkZE
 
-TEAM ♥️• ̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬⃟꙰ͧͧͧ⃤⃫✫⃝꯭꯭꯭꯭햮꯭꯭℠₃₃‎̶₀̶• ⃫̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬⃟꙰♥️⃝⃫꙰꙰꙰✫
 
-### FOR TERMUX USER💥
+
+### Para usuarios de termux💥
 ```bash
 > pkg update && pkg upgrade
 > pkg install git -y
 > pkg install nodejs -y
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
-> git clone https://github.com/Samu330/esubot
+> git clone https://github.com/Ezequiel7u7xD/darkbot2.0
 > cd esubot
 > npm install
 ```
-###### Run🏃🏻‍♂️
-```bash
-> node . [<session name>] (session name is optional)
+###### Iniciar🏃🏻‍♂️
+node index.js
+)
 ```
 
 ---------
@@ -33,7 +33,7 @@ TEAM ♥️• ̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬̬�
 * Download And Install FFMPEG [`Click Here`](https://ffmpeg.org/download.html) (don't forget to path) 
 * Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php) (if nulis want work,  checklist columns 1,2,3,5,6) 
 ```bash
-> git clone https://github.com/Samu330/esubot
+> git clone https://github.com/Ezequiel7u7xD/darkbot2.0
 > cd esubot
 > npm install
 ```
