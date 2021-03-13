@@ -9,7 +9,7 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
   .then(batch => {
     conn.updatePresence(m.chat, Presence.composing)
   conn.reply(m.chat, `${batch.success}`, m)
-  }) .catch(() => { conn.reply(m.chat, `_¡Me bugiaron de tanto usar esta opción! aweonaos :(_`, m) })
+  }) .catch(() => { conn.reply(m.chat, `_Error:(_`, m) })
 }
 handler.help = ['simi','s'].map(v => v + ' *text*')
 handler.tags = ['fun']
