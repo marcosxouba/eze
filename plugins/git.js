@@ -1,10 +1,10 @@
 let handler = async m => m.reply(`
  *GIT DE ESTE BOT*
-https://github.com/Samu330/esubot
+https://github.com/Ezequiel7u7xD/darkbot2.0/edit/main/
 
 MY GIT:
 
-https://github.com/Samu330
+https://github.com/Ezequiel7u7xD
 😴                                       
 `.trim()) 
 handler.help = ['git']
