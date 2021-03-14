@@ -1,15 +1,15 @@
 let handler = async m => m.reply(`
- *GIT DE ESTE BOT*
-https://github.com/Ezequiel7u7xD/darkbot2.0/edit/main/
+ Grupos que te podrían Interesar:
 
-MY GIT:
 
-https://github.com/Ezequiel7u7xD
+
+
+
 😴                                       
 `.trim()) 
 handler.help = ['git']
 handler.tags = ['info']
-handler.command = /^git$/i
+handler.command = /^igroups$/i
 
 module.exports = handler
 
