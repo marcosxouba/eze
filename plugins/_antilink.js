@@ -6,7 +6,7 @@ handler.before = m => {
   let chat = global.DATABASE.data.chats[m.chat]
   let isGroupLink = linkRegex.exec(m.text)
 
-  if (chat.antiLink && isGroupLink) m.reply('/kick %name')
+  if (chat.antiLink && isGroupLink) m.reply('/kick ${name} (@${who.replace(/@.+/, '')})')
 
   return true
 }
