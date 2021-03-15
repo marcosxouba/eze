@@ -5,7 +5,7 @@ let handler = async(m, { conn, args, command, usedPrefix }) => {
   fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/anime/random.txt').then(res => res.text()).then(body => {
     let randomnime = body.split('\n')
     let randomnimex = randomnime[Math.floor(Math.random() * randomnime.length)]
-    conn.sendFile(m.chat, randomnimex, '', 'error xd pto!! ', m)
+    conn.sendFile(m.chat, randomnimex, '', 'es hora de pajiarse con Cicatricure 🥶🥶🥶!! ', m)
   }).catch(() => {
     conn.reply(m.chat, ` !`, m)
   })
