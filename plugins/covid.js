@@ -13,7 +13,7 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 	let text = args.join` `
 	await conn.updatePresence(m.chat, Presence.composing) 
 	conn.reply(m.chat, `*Buscando datos . . .*`, m)
-	fetch("https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=Provinsi%20%3D%20'" + encodeURIComponent(text) + "'&outFields=*&outSR=4326&f=json")
+	fetch("https://www.google.com/'" + encodeURIComponent(text) + "'&outFields=*&outSR=4326&f=json")
   .then(res => res.json())
   .then(batch => {
     conn.updatePresence(m.chat, Presence.composing) 
