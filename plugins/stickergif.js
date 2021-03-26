@@ -32,7 +32,7 @@ let handler = async (m, { conn, args, usedPrefix }) => {
             .addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
             .toFormat('webp')
             .save(ran)
-    } else if ((isMedia && m.message.videoMessage.seconds < 11 || isQuotedVideo && m.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+    } else if ((isMedia && m.message.videoMessage.seconds < 50 || isQuotedVideo && m.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 50) && args.length == 0) {
         const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(m).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : m
         const media = await conn.downloadAndSaveMediaMessage(encmedia)
         const ran = getRandom('.webp')
@@ -67,9 +67,9 @@ let handler = async (m, { conn, args, usedPrefix }) => {
             fs.unlinkSync(media)
             let buffer = Buffer.m.chat(res.base64img, 'base64')
             fs.writeFileSync(ranp, buffer, (err) => {
-                if (err) return reply('Falló, se produjo un error, inténtelo de nuevo más tarde del.')
+                if (err) return reply('Falló, se produjo un error, inténtelo de nuevo más tarde.')
             })
-            exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
+            exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 1024:1024 ${ranw}`, (err) => {
                 fs.unlinkSync(ranp)
                 if (err) return m.reply('Error!')
                 buff = fs.readFileSync(ranw)
@@ -77,17 +77,18 @@ let handler = async (m, { conn, args, usedPrefix }) => {
             })
         })
     } else {
-        conn.reply(m.chat,`*[ ERROR ]*\n\nNo se pudo hacer una calcomanía gif, tal vez tu video es demasiado largo. `,m)
+        conn.reply(m.chat,`*[ ERROR ]*\n\nNo se pudo hacer un stickergif, tal vez tu video es demasiado largo. `,m)
     }
 }
-handler.help = ['stickergif *(caption|reply)*','sgif *(caption|reply)*']
+handler.help = ['stickergif','skgif']
 handler.tags = ['sticker']
-handler.command = /^stickergif|stikergif|sgif$/i
+handler.command = /^stickergif|stikergif|skgif$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
+handler.register = true
 
 handler.admin = false
 handler.botAdmin = false
