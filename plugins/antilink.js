@@ -4,7 +4,7 @@ let handler = async function(m, { conn ,args}) {
   const sleep = async (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-  conn.fakeReply(m.chat,'_*Adiós amigo, que sus actos de adoración sean aceptados por su lado..*_' ,'0@s.whatsapp.net', '*「❗」GROUP LINK DETECTOR「❗」*','1@broadcast')
+  conn.fakeReply(m.chat,'_*Adios zorra :D..*_' ,'0@s.whatsapp.net', '*「❗」GROUP LINK DETECTOR「❗」*','1@broadcast')
   await sleep(1000)
 await conn.groupRemove(m.chat, [users])
 }
